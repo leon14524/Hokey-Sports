@@ -1,167 +1,368 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hokey-Sports</title>
-    <!-- font awesome link  -->
-    <script src="https://kit.fontawesome.com/a3ed438e37.js" crossorigin="anonymous"></script>
-<!-- tailwind css with daisy UI link  -->    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hokey-Sports</title>
+  <!-- font awesome link  -->
+  <script src="https://kit.fontawesome.com/a3ed438e37.js" crossorigin="anonymous"></script>
+  <!-- tailwind css with daisy UI link  -->
 
-<link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 
-<!-- google font manrope link  -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- google font manrope link  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
 
-<style>
-.font-manrope{
-    font-family: 'Manrope', sans-serif;
-}
-</style>
+  <style>
+    .font-manrope {
+      font-family: 'Manrope', sans-serif;
+    }
+  </style>
 
-<!-- customizing your config color -->
-    <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                'just-red': '#FF4240',
-                'just-black': '#131318',
-                'just-primary-pragraph': '#13131899',
-              }
-            }
+  <!-- customizing your config color -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'just-red': '#FF4240',
+            'just-black': '#131318',
+            'just-primary-pragraph': '#13131899',
           }
         }
-      </script>
+      }
+    }
+  </script>
 
-      
+
 </head>
+
 <body class="font-manrope">
 
-    <header class="container mx-auto">
-        <div class="navbar bg-base-100">
-            <div class="navbar-start">
-              <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                </div>
-                <ul tabindex="0" class="menu  menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                  <li><a><span class="text-just-red">Home</span></a></li>
-                  <li><a>About</a></li>
-                  <li><a>Pages</a></li>             
-                  <li><a>Blog</a></li>
-                  <li><a>Contact</a></li>
-                 
-                  
-                </ul>
-                
-              </div>
-              <a class="btn btn-ghost font-extrabold text-xl lg:text-4xl">Hockey<span class="text-just-red">’</span>s</a>
-            </div>
-            <div class="navbar-center hidden lg:flex">
-              <ul class="menu menu-horizontal px-1 font-medium text-xl">
-                <li><a><span class="text-just-red">Home</span></a></li>
-                  <li><a>About</a></li>
-                  <li><a>Pages</a></li>             
-                  <li><a>Blog</a></li>
-                  <li><a>Contact</a></li>
-                  
-              </ul>
-    
-            </div>
-            <div class="navbar-end">
-               
-              <a class="btn bg-just-red gap-10 px-5 py-2 text-white text-xl font-bold">Get Ticket</a>
-            </div>
+  <header class="container mx-auto">
+    <div class="navbar bg-base-100">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
           </div>
+          <ul tabindex="0" class="menu  menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            <li><a><span class="text-just-red">Home</span></a></li>
+            <li><a>About</a></li>
+            <li><a>Pages</a></li>
+            <li><a>Blog</a></li>
+            <li><a>Contact</a></li>
 
-          <!-- carousel or slider  section -->
-        
-            <div class="carousel w-full lg:h-[550px] rounded-xl">
-                <div id="slide1" class="carousel-item relative w-full">
-                  <img src="Images/1.png" class="w-full object-contain object-cover" />
-                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide4" class="btn btn-circle">❮</a> 
-                    <a href="#slide2" class="btn btn-circle">❯</a>
-                  </div>
-                </div> 
-                <div id="slide2" class="carousel-item relative w-full">
-                    <img src="Images/bbb.jpg" class="w-full object-cover" />
-                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide1" class="btn btn-circle">❮</a> 
-                    <a href="#slide3" class="btn btn-circle">❯</a>
-                  </div>
-                </div> 
-                <div id="slide3" class="carousel-item relative w-full">
-                    <img src="Images/pppp.jpeg" class="w-full object-cover" />
-                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide2" class="btn btn-circle">❮</a> 
-                    <a href="#slide4" class="btn btn-circle">❯</a>
-                  </div>
-                </div> 
-                <div id="slide4" class="carousel-item relative w-full">
-                    <img src="Images/hhhh.jpeg" class="w-full object-cover" />
-                  <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide3" class="btn t btn-circle">❮</a> 
-                    <a href="#slide1" class="btn btn-circle">❯</a>
-                  </div>
-                </div>
-              </div>
-          
-    </header>
 
-     <main class="container mx-auto my-10">
+          </ul>
 
-        <!-- Professional Hockeys Club section start  -->
+        </div>
+        <a class="btn btn-ghost font-extrabold text-xl lg:text-4xl">Hockey<span class="text-just-red">’</span>s</a>
+      </div>
+      <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1 font-medium text-xl">
+          <li><a><span class="text-just-red">Home</span></a></li>
+          <li><a>About</a></li>
+          <li><a>Pages</a></li>
+          <li><a>Blog</a></li>
+          <li><a>Contact</a></li>
 
-            <h3 class=" text-xl lg:text-4xl mb-6 font-extrabold text-just-black  text-center">Professional Hockeys Club</h3>
-            <p class="text-sm font-medium text-center max-w-lg mx-auto color-just-primary-pragraph">Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin. </p>
+        </ul>
 
-          <div class="grid mt-6 gap-7 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 text-center mx-auto">
-            
-                <div>
-                    <div class="radial-progress text-[#FF4240] w-20 h-20 " style="--value:87;" role="progressbar"><span class="text-[#131318;] text-2xl font-extrabold">87%</span></div>
+      </div>
+      <div class="navbar-end">
 
-                        <h6 class="text-xl font-semibold m-2">Prayer Facility</h6>
+        <a class="btn bg-just-red gap-10 px-5 py-2 text-white text-xl font-bold">Get Ticket</a>
+      </div>
+    </div>
 
-                        <p class="text-xs font-normal text-gray-500 w-56 mx-auto" >Haque's popularity is highest in Bangladesh</p>
-                </div>
+    <!-- carousel or slider  section -->
 
-                <div >
-                    <div class="radial-progress text-[#49D293] w-20 h-20 " style="--value:95;" role="progressbar"><span class="text-[#131318;] text-2xl font-extrabold">95%</span></div>
+    <div class="carousel w-full lg:h-[550px] rounded-xl">
+      <div id="slide1" class="carousel-item relative w-full">
+        <img src="Images/1.png" class="w-full object-contain object-cover" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide4" class="btn btn-circle">❮</a>
+          <a href="#slide2" class="btn btn-circle">❯</a>
+        </div>
+      </div>
+      <div id="slide2" class="carousel-item relative w-full">
+        <img src="Images/bbb.jpg" class="w-full object-cover" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide1" class="btn btn-circle">❮</a>
+          <a href="#slide3" class="btn btn-circle">❯</a>
+        </div>
+      </div>
+      <div id="slide3" class="carousel-item relative w-full">
+        <img src="Images/pppp.jpeg" class="w-full object-cover" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide2" class="btn btn-circle">❮</a>
+          <a href="#slide4" class="btn btn-circle">❯</a>
+        </div>
+      </div>
+      <div id="slide4" class="carousel-item relative w-full">
+        <img src="Images/hhhh.jpeg" class="w-full object-cover" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide3" class="btn t btn-circle">❮</a>
+          <a href="#slide1" class="btn btn-circle">❯</a>
+        </div>
+      </div>
+    </div>
 
-                        <h6 class="text-xl font-semibold m-2">Prayer Facility</h6>
+  </header>
 
-                        <p class="text-xs font-normal text-gray-500 w-56 mx-auto" >Haque's popularity is highest in Bangladesh</p>
-                </div>
+  <main class="container mx-auto my-10">
 
-                <div >
-                    <div class="radial-progress text-[#FFB546] w-20 h-20 " style="--value:90;" role="progressbar"><span class="text-[#131318;] text-2xl font-extrabold">90%</span></div>
+    <!-- Professional Hockeys Club section start  -->
 
-                        <h6 class="text-xl font-semibold m-2">Prayer Facility</h6>
+    <h3 class=" text-xl lg:text-4xl mb-6 font-extrabold text-just-black  text-center">Professional Hockeys Club</h3>
+    <p class="text-sm font-medium text-center max-w-lg mx-auto color-just-primary-pragraph">Bangladesh started taking part in international hockey tournaments by participating in the 1st Junior World Cup . </p>
 
-                        <p class="text-xs font-normal text-gray-500 w-56 mx-auto" >Haque's popularity is highest in Bangladesh</p>
-                </div>
-                    
-                <div >
-                    <div class="radial-progress text-[#FF4240] w-20 h-20 " style="--value:80;" role="progressbar"><span class="text-[#131318;] text-2xl font-extrabold">80%</span></div>
+    <div class="grid mt-6 gap-7 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 text-center mx-auto">
 
-                        <h6 class="text-xl font-semibold m-2">Prayer Facility</h6>
+      <div>
+        <div class="radial-progress text-[#FF4240] w-20 h-20 " style="--value:87;" role="progressbar"><span
+            class="text-[#131318;] text-2xl font-extrabold">87%</span></div>
 
-                        <p class="text-xs font-normal text-gray-500 w-56 mx-auto" >Haque's popularity is highest in Bangladesh</p>
-                </div>
+        <h6 class="text-xl font-semibold m-2">Prayer Facility</h6>
+
+        <p class="text-xs font-normal text-gray-500 w-56 mx-auto">Haque's popularity is highest in Bangladesh</p>
+      </div>
+
+      <div>
+        <div class="radial-progress text-[#49D293] w-20 h-20 " style="--value:95;" role="progressbar"><span
+            class="text-[#131318;] text-2xl font-extrabold">95%</span></div>
+
+        <h6 class="text-xl font-semibold m-2">Prayer Facility</h6>
+
+        <p class="text-xs font-normal text-gray-500 w-56 mx-auto">Haque's popularity is highest in Bangladesh</p>
+      </div>
+
+      <div>
+        <div class="radial-progress text-[#FFB546] w-20 h-20 " style="--value:90;" role="progressbar"><span
+            class="text-[#131318;] text-2xl font-extrabold">90%</span></div>
+
+        <h6 class="text-xl font-semibold m-2">Prayer Facility</h6>
+
+        <p class="text-xs font-normal text-gray-500 w-56 mx-auto">Haque's popularity is highest in Bangladesh</p>
+      </div>
+
+      <div>
+        <div class="radial-progress text-[#FF4240] w-20 h-20 " style="--value:80;" role="progressbar"><span
+            class="text-[#131318;] text-2xl font-extrabold">80%</span></div>
+
+        <h6 class="text-xl font-semibold m-2">Prayer Facility</h6>
+
+        <p class="text-xs font-normal text-gray-500 w-56 mx-auto">Haque's popularity is highest in Bangladesh</p>
+      </div>
+
+    </div>
+
+    <!-- Professional Hockeys section Club end  -->
+
+    <!-- Program Sections start -->
+
+        <section class="my-10">
+
+          <h3 class=" text-xl lg:text-4xl mb-6 font-extrabold text-just-black  text-center">Program Sections</h3>
+          <p class="text-sm font-medium text-center max-w-lg mx-auto color-just-primary-pragraph">Bangladesh started taking part in international hockey tournaments by participating in the 1st Junior World Cup . </p>
          
-          </div>
 
-          <!-- Professional Hockeys section Club end  -->
-     </main>
+           
+                
 
-     <footer>
+        </section>
 
-     </footer>
-    
+
+    <!-- Program Sections end -->
+
+    <!-- Our New Products section start  -->
+
+      <section class="my-10">
+        <h3 class=" text-xl lg:text-4xl mb-6 font-extrabold text-just-black  text-center">Our New Products</h3>
+        <p class="text-sm font-medium text-center max-w-lg mx-auto color-just-primary-pragraph">Bangladesh started taking part in international hockey tournaments by participating in the 1st Junior World Cup . </p>
+
+        <div class="grid gap-10 grid-cols-1 lg:grid-cols-2 rounded-md my-10 ">
+                        <!-- 1st card  -->
+              <div class="hero bg-base-200">
+                <div class="hero-content flex-col lg:flex-row">
+                  <img src="Images/5.png" class="max-w-sm  " />
+                  <div>
+                    <div class="rating">
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400 mr-2" checked />
+                      <p>5.00</p>
+                   </div>
+
+                      <div class="rating mx-2">
+                        <input type="radio" name="rating-3" class="mask mask-heart bg-red-400 mr-2" />
+                        <p>200</p>
+                      </div>
+
+                      <div class="rating">
+                        <input type="radio" name="rating-3" class="mask mask-heart bg-red-400 mr-2" />
+                        <p>200</p>
+                      </div>
+                 
+                    <h4 class="text-xl font-extrabold">World Cup Flags Football</41>
+                    <p class="py-2 text-sm text-just-primary-pragraph">Hockey was introduced in Bengal during the British period. </p>
+                      <span class="text-just-red mr-3">Price - $22.00</span> <kbd class="kbd text-sm">⌘</kbd> <span class="text-sm font-medium">Delivery Fee : Free</span>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- 2nd card -->
+              <div class="hero bg-base-200">
+                <div class="hero-content flex-col lg:flex-row">
+                  <img src="Images/6.png" class="max-w-sm  " />
+                  <div>
+                    <div class="rating">
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400 mr-2" checked />
+                      <p>5.00</p>
+                   </div>
+
+                      <div class="rating mx-2">
+                        <input type="radio" name="rating-3" class="mask mask-heart bg-red-400 mr-2" />
+                        <p>200</p>
+                      </div>
+
+                      <div class="rating">
+                        <input type="radio" name="rating-3" class="mask mask-heart bg-red-400 mr-2" />
+                        <p>200</p>
+                      </div>
+                 
+                    <h4 class="text-xl font-extrabold">World Cup Flags Football</41>
+                    <p class="py-2 text-sm text-just-primary-pragraph">Hockey was introduced in Bengal during the British period. </p>
+                      <span class="text-just-red mr-3">Price - $22.00</span> <kbd class="kbd text-sm">⌘</kbd> <span class="text-sm font-medium">Delivery Fee : Free</span>
+                  </div>
+                </div>
+              </div>
+
+                 <!-- 3rd card -->
+              <div class="hero bg-base-200">
+                <div class="hero-content flex-col lg:flex-row">
+                  <img src="Images/7.png" class="max-w-sm  " />
+                  <div>
+                    <div class="rating">
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400 mr-2" checked />
+                      <p>5.00</p>
+                   </div>
+
+                      <div class="rating mx-2">
+                        <input type="radio" name="rating-3" class="mask mask-heart bg-red-400 mr-2" />
+                        <p>200</p>
+                      </div>
+
+                      <div class="rating">
+                        <input type="radio" name="rating-3" class="mask mask-heart bg-red-400 mr-2" />
+                        <p>200</p>
+                      </div>
+                 
+                    <h4 class="text-xl font-extrabold">World Cup Flags Football</41>
+                    <p class="py-2 text-sm text-just-primary-pragraph">Hockey was introduced in Bengal during the British period. </p>
+                      <span class="text-just-red mr-3">Price - $22.00</span> <kbd class="kbd text-sm">⌘</kbd> <span class="text-sm font-medium">Delivery Fee : Free</span>
+                  </div>
+                </div>
+              </div>
+
+                   <!-- 4th card -->
+              <div class="hero bg-base-200">
+                <div class="hero-content flex-col lg:flex-row">
+                  <img src="Images/8.png" class="max-w-sm  " />
+                  <div>
+                    <div class="rating">
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400 mr-2" checked />
+                      <p>5.00</p>
+                   </div>
+
+                      <div class="rating mx-2">
+                        <input type="radio" name="rating-3" class="mask mask-heart bg-red-400 mr-2" />
+                        <p>200</p>
+                      </div>
+
+                      <div class="rating">
+                        <input type="radio" name="rating-3" class="mask mask-heart bg-red-400 mr-2" />
+                        <p>200</p>
+                      </div>
+                 
+                    <h4 class="text-xl font-extrabold">World Cup Flags Football</41>
+                    <p class="py-2 text-sm text-just-primary-pragraph">Hockey was introduced in Bengal during the British period. </p>
+                      <span class="text-just-red mr-3">Price - $22.00</span> <kbd class="kbd text-sm">⌘</kbd> <span class="text-sm font-medium">Delivery Fee : Free</span>
+                  </div>
+                </div>
+              </div>
+                   <!-- 5th card -->
+              <div class="hero bg-base-200">
+                <div class="hero-content flex-col lg:flex-row">
+                  <img src="Images/9.png" class="max-w-sm  " />
+                  <div>
+                    <div class="rating">
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400 mr-2" checked />
+                      <p>5.00</p>
+                   </div>
+
+                      <div class="rating mx-2">
+                        <input type="radio" name="rating-3" class="mask mask-heart bg-red-400 mr-2" />
+                        <p>200</p>
+                      </div>
+
+                      <div class="rating">
+                        <input type="radio" name="rating-3" class="mask mask-heart bg-red-400 mr-2" />
+                        <p>200</p>
+                      </div>
+                 
+                    <h4 class="text-xl font-extrabold">World Cup Flags Football</41>
+                    <p class="py-2 text-sm text-just-primary-pragraph">Hockey was introduced in Bengal during the British period. </p>
+                      <span class="text-just-red mr-3">Price - $22.00</span> <kbd class="kbd text-sm">⌘</kbd> <span class="text-sm font-medium">Delivery Fee : Free</span>
+                  </div>
+                </div>
+              </div>
+                   <!-- 6th card -->
+              <div class="hero bg-base-200">
+                <div class="hero-content flex-col lg:flex-row">
+                  <img src="Images/10.png" class="max-w-sm  " />
+                  <div>
+                    <div class="rating">
+                      <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400 mr-2" checked />
+                      <p>5.00</p>
+                   </div>
+
+                      <div class="rating mx-2">
+                        <input type="radio" name="rating-3" class="mask mask-heart bg-red-400 mr-2" />
+                        <p>200</p>
+                      </div>
+
+                      <div class="rating">
+                        <input type="radio" name="rating-3" class="mask mask-heart bg-red-400 mr-2" />
+                        <p>200</p>
+                      </div>
+                 
+                    <h4 class="text-xl font-extrabold">World Cup Flags Football</41>
+                    <p class="py-2 text-sm text-just-primary-pragraph">Hockey was introduced in Bengal during the British period. </p>
+                      <span class="text-just-red text-xl font-extrabold mr-3">Price - $22.00</span> <kbd class="kbd text-sm">⌘</kbd> <span class="text-sm font-medium">Delivery Fee : Free</span>
+                  </div>
+                </div>
+              </div>
+
+
+              
+        </div>
+      </section>
+
+  </main>
+
+  <footer>
+
+  </footer>
+
 </body>
+
 </html>
